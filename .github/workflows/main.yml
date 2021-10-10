@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: checkout
-    - uses: actions/checkout@master
+      uses: actions/checkout@master
 
     - name: sync to s3
-    - uses: jakejarvis/s3-sync-action@master
+      uses: jakejarvis/s3-sync-action@master
       with:
         args: --acl public-read --follow-symlinks --delete --exclude '.git/*' --exclude '.github/*'
       env:
@@ -24,10 +24,11 @@ jobs:
         DEST_DIR: 'resume'
 
     - name: invalidate cloudfront cache
-    - uses: chetan/invalidate-cloudfront-action@v2
+      uses: chetan/invalidate-cloudfront-action@v2
       env:
         DISTRIBUTION: ${{ secrets.DISTRIBUTION }}
         PATHS: '/resume.html'
         AWS_REGION: 'us-east-1'
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
         AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        
