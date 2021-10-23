@@ -300,20 +300,44 @@ a {
                 </div>
             </div>
         </div>
-        <div class="borders"></div>
+        <div class="borders">
+            <span class="bordertextright">
+                Visitors: <a id="visitors"></a>
+            </span>
+        </div>
     </div>
 
-    <script>
-    var toggler = document.getElementsByClassName("caret");
-    var i;
-    
-    for (i = 0; i < toggler.length; i++) {
-      toggler[i].addEventListener("click", function() {
-        this.parentElement.querySelector(".nested").classList.toggle("active");
-        this.classList.toggle("caret-down");
-      });
-    }
+    <script type="text/javascript">
+        fetch("https://bntwxqufj7.execute-api.us-east-2.amazonaws.com/Prod/counter",
+            {
+            method: "GET"
+            }
+        )
+
+        .then(
+            response => response.json()
+        )
+
+        .then(
+            data => {
+                console.log(data)
+                number = data.counter
+                document.getElementById("visitors").innerHTML = (number)
+            }
+        );
     </script>
-    
+
+    <script>
+        var toggler = document.getElementsByClassName("caret");
+        var i;
+        
+        for (i = 0; i < toggler.length; i++) {
+        toggler[i].addEventListener("click", function() {
+            this.parentElement.querySelector(".nested").classList.toggle("active");
+            this.classList.toggle("caret-down");
+        });
+        }
+    </script>    
+
     </body>
     </html>
