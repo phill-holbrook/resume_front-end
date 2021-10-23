@@ -1,130 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<style>
+    <style>
+        .full-page-width {
+            width: 100%;
+            overflow: hidden;
+            background-color: #B6AD90;
+            height: 100%;
+        }
 
-.full-page-width {
-    width: 100%;
-    overflow: hidden;
-    background-color: #B6AD90;
-    height: 100%;
-}
-.center-content-container {
-    margin: auto;
-    max-width: 768px;
-    overflow: hidden;
-    background-color: #414833;
-    height: 100%;
-}
-.content-container {
-    width: 75%;
-    height:100%;
-    min-height:700px;
-    margin: 0 auto;
-    background-color: #7F4F24;
-    padding:30px;
-    font-size: 90%;
-    font-family: 'Optima';
-    color: whitesmoke;
-}
-.borders {
-    margin: auto;
-    max-width: 768px;
-    height: 75px;
-    background-color: #333D29;
-}
-.bordertextleft {
-    margin: auto;
-    font-family: 'Optima';
-    font-size: 200%;
-    color: whitesmoke;
-    padding: 20px 0 0 8%;
-    float: left;
-}
+        .center-content-container {
+            margin: auto;
+            max-width: 768px;
+            overflow: hidden;
+            background-color: #414833;
+            height: 100%;
+        }
 
-.bordertextright {
-    margin: auto;
-    font-family: 'Optima';
-    color: whitesmoke;
-    text-align: right;
-    padding: 12px 8% 0 0;
-    float: right;
-}
+        .content-container {
+            width: 75%;
+            height: 100%;
+            min-height: 700px;
+            margin: 0 auto;
+            background-color: #7F4F24;
+            padding: 30px;
+            font-size: 90%;
+            font-family: 'Optima';
+            color: whitesmoke;
+        }
 
-.content {
-    width: 100%;
-    height: 100%;
-    text-align:left;
-}
+        .borders {
+            margin: auto;
+            max-width: 768px;
+            height: 75px;
+            background-color: #333D29;
+        }
 
-ul, p {
-  font-family: 'Verdana';
-  list-style-type: none;
-}
+        .bordertextleft {
+            margin: auto;
+            font-family: 'Optima';
+            font-size: 200%;
+            color: whitesmoke;
+            padding: 20px 0 0 8%;
+            float: left;
+        }
 
-p {
-  margin-top: 5px;
-}
+        .bordertextright {
+            margin: auto;
+            font-family: 'Optima';
+            color: whitesmoke;
+            text-align: right;
+            padding: 12px 8% 0 0;
+            float: right;
+        }
 
-h3 {
-    margin-top: 2px;
-    font-weight: normal;
-}
+        .content {
+            width: 100%;
+            height: 100%;
+            text-align: left;
+        }
 
-.col {
-  margin: 0;
-  padding: 5px;
-}
+        ul,
+        p {
+            font-family: 'Verdana';
+            list-style-type: none;
+        }
 
-.i {
-  list-style-type: circle;
-  margin: 5px;
-}
+        p {
+            margin-top: 5px;
+        }
 
-li {
-    margin: 5px;
-}
+        h3 {
+            margin-top: 2px;
+            font-weight: normal;
+        }
 
-#summary {
-    margin-left: 20px;
-}
+        .col {
+            margin: 0;
+            padding: 5px;
+        }
 
-a {
-    color: #A4AC86
-}
+        .i {
+            list-style-type: circle;
+            margin: 5px;
+        }
 
-.caret {
-  cursor: pointer;
-  -webkit-user-select: none; /* Safari 3.1+ */
-  -moz-user-select: none; /* Firefox 2+ */
-  -ms-user-select: none; /* IE 10+ */
-  user-select: none;
-  padding: 5px;
-}
+        li {
+            margin: 5px;
+        }
 
-.caret::before {
-  content: "\25B8";
-  color: white;
-  display: inline-block;
-  margin-right: 6px;
-  padding: 2px;
-}
+        #summary {
+            margin-left: 20px;
+        }
 
-.caret-down::before {
-  -ms-transform: rotate(90deg); /* IE 9 */
-  -webkit-transform: rotate(90deg); /* Safari */
-  transform: rotate(90deg);  
-}
+        a {
+            color: #A4AC86
+        }
 
-.nested {
-  display: none;
-}
+        .caret {
+            cursor: pointer;
+            -webkit-user-select: none;
+            /* Safari 3.1+ */
+            -moz-user-select: none;
+            /* Firefox 2+ */
+            -ms-user-select: none;
+            /* IE 10+ */
+            user-select: none;
+            padding: 5px;
+        }
 
-.active {
-  display: block;
-}
+        .caret::before {
+            content: "\25B8";
+            color: white;
+            display: inline-block;
+            margin-right: 6px;
+            padding: 2px;
+        }
 
-</style>
+        .caret-down::before {
+            -ms-transform: rotate(90deg);
+            /* IE 9 */
+            -webkit-transform: rotate(90deg);
+            /* Safari */
+            transform: rotate(90deg);
+        }
+
+        .nested {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
 </head>
 
 <body style="margin:0">
@@ -144,7 +153,9 @@ a {
                 <div class="content">
 
                     <h2>Summary</h2>
-                    <p id="summary">Technical engineer with 13 years of experience who is proficient at helping businesses meet their goals through the design, implementation, maintenance, and support of technology solutions.</p>
+                    <p id="summary">Technical engineer with 13 years of experience who is proficient at helping
+                        businesses meet their goals through the design, implementation, maintenance, and support of
+                        technology solutions.</p>
 
                     <h2>Technical Skills</h2>
                     <ul class="col">
@@ -213,49 +224,78 @@ a {
                             </ul>
                         </li>
                     </ul>
-                    
+
                     <h2>Experience</h2>
                     <ul class="col">
                         <li>
                             <span class="caret">Infrastructure Engineer @ DataYard [Sept 2021 - Present]</span>
                             <ul class="nested">
-                                <li>Senior member of DataYard's Technical Operations division working on the Infrastructure team. This position works with the Infrastructure Lead and VP of Operations to architect, implement and automate DataYard's delivery of IT services. Automated and improved several internal tasks, including new client onboarding for FortiClient EMS, WSUS automation improvements, application package management improvements, improved monitoring of critical systems, and automated data export/import in support of several system migrations via API.</li>
+                                <li>Senior member of DataYard's Technical Operations division working on the
+                                    Infrastructure team. This position works with the Infrastructure Lead and VP of
+                                    Operations to architect, implement and automate DataYard's delivery of IT services.
+                                    Automated and improved several internal tasks, including new client onboarding for
+                                    FortiClient EMS, WSUS automation improvements, application package management
+                                    improvements, improved monitoring of critical systems, and automated data
+                                    export/import in support of several system migrations via API.</li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">Consulting Technical Engineer @ DataYard [Feb 2019 - Sept 2021]</span>
                             <ul class="nested">
-                                <li>Senior member of DataYard's Client Technical Services department specializing in the At Your Service (AYS) team. This position works closely with DataYard's more senior staff and customers to propose, architect, implement and troubleshoot information technology systems supporting the customer's organizations. Completed several customer impacting projects including server rebuilds, greenfield Active Directory deployments, and network redesigns.</li>
+                                <li>Senior member of DataYard's Client Technical Services department specializing in the
+                                    At Your Service (AYS) team. This position works closely with DataYard's more senior
+                                    staff and customers to propose, architect, implement and troubleshoot information
+                                    technology systems supporting the customer's organizations. Completed several
+                                    customer impacting projects including server rebuilds, greenfield Active Directory
+                                    deployments, and network redesigns.</li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">Network Systems Consultant @ Expedient [Feb 2014 - Sept 2019]</span>
                             <ul class="nested">
-                                <li>Engineer / Level 2 / Level 3 resource for all clients. Primary point of escalation for the Level 1 team. Managed server migration projects, hardware refreshes, and business application upgrades. In-depth exposure to Exchange, SQL, IIS, Hyper-V, and Office 365. Gained experience with basic network infrastructure administration, including firewall configuration, switch configuration, and VLAN configuration. Utilized PowerShell to automate several tasks and compile reports for management.</li>
+                                <li>Engineer / Level 2 / Level 3 resource for all clients. Primary point of escalation
+                                    for the Level 1 team. Managed server migration projects, hardware refreshes, and
+                                    business application upgrades. In-depth exposure to Exchange, SQL, IIS, Hyper-V, and
+                                    Office 365. Gained experience with basic network infrastructure administration,
+                                    including firewall configuration, switch configuration, and VLAN configuration.
+                                    Utilized PowerShell to automate several tasks and compile reports for management.
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">End User Support Specialist @ Expedient [May 2012 - Feb 2014]</span>
                             <ul class="nested">
-                                <li>Primary helpdesk resource for all clients. Provided remote support using Kaseya's RMM. Typical responsibilities included general Windows support, basic network troubleshooting, server support, printer support, and client application support. Basic exposure to common Microsoft technologies including Exchange, SQL, and IIS.</li>
+                                <li>Primary helpdesk resource for all clients. Provided remote support using Kaseya's
+                                    RMM. Typical responsibilities included general Windows support, basic network
+                                    troubleshooting, server support, printer support, and client application support.
+                                    Basic exposure to common Microsoft technologies including Exchange, SQL, and IIS.
+                                </li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">Support Tech II @ Intrust Group [Dec 2011 - Feb 2012]</span>
                             <ul class="nested">
-                                <li>Primary escalation resource for helpdesk team. Performed routine server procedures, including deployments, decommissioning, and maintenance. Performed routine system updates.</li>
+                                <li>Primary escalation resource for helpdesk team. Performed routine server procedures,
+                                    including deployments, decommissioning, and maintenance. Performed routine system
+                                    updates.</li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">Support Tech I @ Intrust Group [Oct 2010 - Dec 2011]</span>
                             <ul class="nested">
-                                <li>Remotely resolved issues for enterprise environment of roughly 1000 users. Advanced troubleshooting of Windows client Operating Systems, Microsoft Office software, printers, antivirus software, and mobile devices. Active Directory user account administrator – primary resource for AD account creation/removal.</li>
+                                <li>Remotely resolved issues for enterprise environment of roughly 1000 users. Advanced
+                                    troubleshooting of Windows client Operating Systems, Microsoft Office software,
+                                    printers, antivirus software, and mobile devices. Active Directory user account
+                                    administrator – primary resource for AD account creation/removal.</li>
                             </ul>
                         </li>
                         <li>
                             <span class="caret">Hardware Technician @ Intrust Group [Sept 2008 - Dec 2010]</span>
                             <ul class="nested">
-                                <li>Built, staged, and deployed new PC equipment using Microsoft MDT. Provided desk-side support to 200 users in client's corporate office. Troubleshot and resolved hardware related issues with PC equipment. Replaced ~180 workstations over a three-month period in a hardware refresh project.</li>
+                                <li>Built, staged, and deployed new PC equipment using Microsoft MDT. Provided desk-side
+                                    support to 200 users in client's corporate office. Troubleshot and resolved hardware
+                                    related issues with PC equipment. Replaced ~180 workstations over a three-month
+                                    period in a hardware refresh project.</li>
                             </ul>
                         </li>
                     </ul>
@@ -304,34 +344,35 @@ a {
     <script type="text/javascript">
         fetch("https://bntwxqufj7.execute-api.us-east-2.amazonaws.com/Prod/counter",
             {
-            method: "GET"
+                method: "GET"
             }
         )
 
-        .then(
-            response => response.json()
-        )
+            .then(
+                response => response.json()
+            )
 
-        .then(
-            data => {
-                console.log(data)
-                number = data.counter
-                document.getElementById("visitors").innerHTML = (number)
-            }
-        );
+            .then(
+                data => {
+                    console.log(data)
+                    number = data.counter
+                    document.getElementById("visitors").innerHTML = (number)
+                }
+            );
     </script>
 
     <script>
         var toggler = document.getElementsByClassName("caret");
         var i;
-        
-        for (i = 0; i < toggler.length; i++) {
-        toggler[i].addEventListener("click", function() {
-            this.parentElement.querySelector(".nested").classList.toggle("active");
-            this.classList.toggle("caret-down");
-        });
-        }
-    </script>    
 
-    </body>
-    </html>
+        for (i = 0; i < toggler.length; i++) {
+            toggler[i].addEventListener("click", function () {
+                this.parentElement.querySelector(".nested").classList.toggle("active");
+                this.classList.toggle("caret-down");
+            });
+        }
+    </script>
+
+</body>
+
+</html>
