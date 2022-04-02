@@ -38,11 +38,20 @@
         }
 
         .bordertextleft {
-            margin: auto;
+            margin: 0 0 0 0;
             font-family: 'Optima';
-            font-size: 200%;
+            font-size: 195%;
             color: whitesmoke;
             padding: 8px 0 0 8%;
+            float: left;
+        }
+
+        .bordertextleftsmall {
+            margin: 0 0 0 0;
+            font-family: 'Optima';
+            font-size: 100%;
+            color: whitesmoke;
+            padding: 0 0 0 8%;
             float: left;
         }
 
@@ -139,16 +148,22 @@
 <body style="margin:0">
     <div class="full-page-width">
         <div class="borders">
+
             <span class="bordertextleft">
                 Phill Holbrook
-                <p style="font-size:35%">Visitors: <a id="visitors"></a></p>
             </span>
+
             <span class="bordertextright">
                 <a href="mailto:phill.holbrook@gmail.com">phill.holbrook@gmail.com</a>
                 <br>
                 <a href="https://github.com/phill-holbrook/">GitHub</a>
                 <br>
                 <a href="https://www.linkedin.com/in/phillholbrook">LinkedIn</a>
+            </span>
+
+            <br><br><br>
+            <span class="bordertextleftsmall">
+                Visitors: <a id="visitors"></a>
             </span>
         </div>
         <div class="center-content-container">
