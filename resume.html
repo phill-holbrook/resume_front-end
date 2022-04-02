@@ -42,7 +42,7 @@
             font-family: 'Optima';
             font-size: 200%;
             color: whitesmoke;
-            padding: 20px 0 0 8%;
+            padding: 8px 0 0 8%;
             float: left;
         }
 
@@ -139,7 +139,10 @@
 <body style="margin:0">
     <div class="full-page-width">
         <div class="borders">
-            <span class="bordertextleft">Phill Holbrook</span>
+            <span class="bordertextleft">
+                Phill Holbrook
+                <p style="font-size:35%">Visitors: <a id="visitors"></a></p>
+            </span>
             <span class="bordertextright">
                 <a href="mailto:phill.holbrook@gmail.com">phill.holbrook@gmail.com</a>
                 <br>
@@ -152,77 +155,85 @@
             <div class="content-container">
                 <div class="content">
 
-                    <h2>Summary</h2>
-                    <p id="summary">Technical engineer with 13 years of experience who is proficient at helping
-                        businesses meet their goals through the design, implementation, maintenance, and support of
-                        technology solutions.</p>
+                    <h2>Bio</h2>
+                    <p id="summary">Hi! I'm Phill. I'm an experienced IT professional interested in automation, scripting, and DevOps.
+                        I built this site to demonstrate skills I've learned through home labbing and independent study, inspired by
+                        the <a href="https://cloudresumechallenge.dev/docs/the-challenge/aws/">Cloud Resume Challenge</a>.
+                        For example, the visitor counter at the top of the page uses JavaScript to call (via AWS API Gateway) a
+                        <a href="https://github.com/phill-holbrook/resume_back-end/blob/master/visitor-counter/app.py">Python script</a> 
+                        that runs AWS Lambda. The script reads from and updates a DynamoDB table to keep track of how many visitors
+                        I've had on the site.
+                        <br><br>                        
+                        I've also implemented a <a href="https://github.com/phill-holbrook/resume_front-end/blob/master/.github/workflows/main.yml">
+                        small CI/CD pipeline using GitHub Actions</a> which publish updates to this site whenever I push to GitHub.
+                        This was fairly easy since the site is a single page of HTML stored as a static file in S3. I did have to
+                        make sure to invalidate CloudFront cache, though, so the published updates are visible instantly.
+                        <br><br>
+                        My GitHub profile also has some of my other side projects, including a Slack bot that provides cat facts,
+                        a Discord bot that provides dog facts, and some Python projects while going through A Cloud Guru's Intro to
+                        Python Development course.
+                        <br><br>
+                        If you have any questions feel free to reach out to me via <a href="mailto:phill.holbrook@gmail.com">email</a>
+                        or on <a href="https://www.linkedin.com/in/phillholbrook">LinkedIn</a>!
+                    </p>
 
                     <h2>Technical Skills</h2>
+                    <p>Click to expand each section!</p>
                     <ul class="col">
                         <li>
-                            <span class="caret">Microsoft Stack</span>
-                            <ul class="nested">
-                                <li>
-                                    <span class="caret">On-Prem</span>
-                                    <ul class="nested i">
-                                        <li>Windows Server</li>
-                                        <li>Active Directory</li>
-                                        <li>Exchange Server</li>
-                                        <li>Microsoft SQL</li>
-                                        <li>IIS</li>
-                                        <li>Hyper-V</li>
-                                        <li>WSUS</li>
-                                        <li>Failover Clustering</li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <span class="caret">Cloud</span>
-                                    <ul class="nested i">
-                                        <li>Office 365</li>
-                                        <li>Exchange Online</li>
-                                        <li>SharePoint Online</li>
-                                        <li>OneDrive</li>
-                                        <li>Azure AD</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="caret">Fortinet Stack</span>
+                            <span class="caret">Automation</span>
                             <ul class="nested i">
-                                <li>FortiGate</li>
-                                <li>FortiSwitch</li>
-                                <li>FortiWifi / FortiAP</li>
-                                <li>FortiEMS / FortiClient</li>
-                                <li>FortiAnalyzer</li>
-                                <li>FortiAuthenticator</li>
-                                <li>FortiMail</li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="caret">AWS Stack</span>
-                            <ul class="nested i">
-                                <li>EC2</li>
-                                <li>S3</li>
-                                <li>Lambda</li>
-                                <li>DynamoDB</li>
-                                <li>SAM</li>
-                                <li>CloudFront</li>
-                            </ul>
-                        </li>
-
-                        <li>
-                            <span class="caret">Other</span>
-                            <ul class="nested i">
-                                <li>VMware ESXi / vSphere / vCenter</li>
+                                <li>PowerShell</li>
+                                <li>Python</li>
                                 <li>Docker</li>
-                                <li>macOS</li>
-                                <li>Ansible</li>
-                                <li>Linux (Ubuntu, RHEL / centOS)</li>
+                                <li>Ansible / AWX</li>
+                                <li>GitLab / GitHub</li>
+                                <li>Chocolatey</li>
+                                <li>REST APIs</li>
                             </ul>
                         </li>
+
+                        <li>
+                            <span class="caret">Cloud</span>
+                            <ul class="nested i">
+                                <li>AWS (EC2, Lambda, DynamoDB, SAM, CodeDeploy, S3)</li>
+                                <li>Microsoft 365 (Exchange Online, SharePoint Online, One Drive, Teams)</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="caret">Systems</span>
+                            <ul class="nested i">
+                                <li>Ubuntu, CentOS, RHEL (LAMP, general administration)</li>
+                                <li>Windows Server (Active Directory, Exchange, Microsoft SQL, IIS, Failover Clustering)</li>
+                                <li>Virtualization (VMWare, Hyper-V, Proxmox)</li>
+                                <li>SAN / Storage / HCI (Nimble, Dell EMC VNX, Cisco UCS, Dell EMC VxRail)</li>
+                                <li>ELK stack, TICK stack, and Icinga</li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <span class="caret">Networking</span>
+                            <ul class="nested i">
+                                <li>Fortinet (FortiGate, FortiSwitch, FortiAP, FortiAnalyzer, FortiAuthenticator, FortiMail)</li>
+                                <li>Ubiquity (UniFi APs and UniFi switches)</li>
+                                <li>Design and troubleshooting</li>
+                                <li>VLANs and network segmentation</li>
+                                <li>NGFW policy configuration</li>
+                                <li>LAG / MC-LAG and resiliency</li>
+                                <li>RADIUS and 802.1x authentication</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h2>Certifications</h2>
+                    <ul class="i">
+                            <li><a href="https://www.credly.com/badges/70dcce64-20ff-4336-b886-01d67a57a82d/public_url">AWS Certified Cloud Practitioner</a></li>
+                            <li>MCTS: Exchange Server 2010, Configuring</li>
+                            <li>MCTS: SQL Server 2008 Implementation and Maintenance</li>
+                            <li>MCITP: Server Administrator</li>
+                            <li>CompTIA Network+</li>
+                            <li>Kaseya Certified Administrator</li>
                     </ul>
 
                     <h2>Experience</h2>
@@ -272,32 +283,6 @@
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <span class="caret">Support Tech II @ Intrust Group [Dec 2011 - Feb 2012]</span>
-                            <ul class="nested">
-                                <li>Primary escalation resource for helpdesk team. Performed routine server procedures,
-                                    including deployments, decommissioning, and maintenance. Performed routine system
-                                    updates.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="caret">Support Tech I @ Intrust Group [Oct 2010 - Dec 2011]</span>
-                            <ul class="nested">
-                                <li>Remotely resolved issues for enterprise environment of roughly 1000 users. Advanced
-                                    troubleshooting of Windows client Operating Systems, Microsoft Office software,
-                                    printers, antivirus software, and mobile devices. Active Directory user account
-                                    administrator – primary resource for AD account creation/removal.</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <span class="caret">Hardware Technician @ Intrust Group [Sept 2008 - Dec 2010]</span>
-                            <ul class="nested">
-                                <li>Built, staged, and deployed new PC equipment using Microsoft MDT. Provided desk-side
-                                    support to 200 users in client's corporate office. Troubleshot and resolved hardware
-                                    related issues with PC equipment. Replaced ~180 workstations over a three-month
-                                    period in a hardware refresh project.</li>
-                            </ul>
-                        </li>
                     </ul>
 
                     <h2>Education</h2>
@@ -320,22 +305,10 @@
                             </ul>
                         </li>
                     </ul>
-                    <h2>Certifications</h2>
-                    <ul class="i">
-                            <li><a href="https://www.credly.com/badges/70dcce64-20ff-4336-b886-01d67a57a82d/public_url">AWS Certified Cloud Practitioner</a></li>
-                            <li>MCTS: Exchange Server 2010, Configuring</li>
-                            <li>MCTS: SQL Server 2008 Implementation and Maintenance</li>
-                            <li>MCITP: Server Administrator</li>
-                            <li>CompTIA Network+</li>
-                            <li>Kaseya Certified Administrator</li>
-                    </ul>
                 </div>
             </div>
         </div>
         <div class="borders">
-            <span class="bordertextright">
-                Visitors: <a id="visitors"></a>
-            </span>
         </div>
     </div>
 
